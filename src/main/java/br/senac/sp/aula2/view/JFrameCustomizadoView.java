@@ -32,7 +32,6 @@ public class JFrameCustomizadoView extends javax.swing.JFrame {
         initComponents();
         setSize(dm);
         setPreferredSize(dm);
-        setResizable(false);
         setLocationRelativeTo(null);
         setTitle("aula2");
         jPanel1.setBorder(BorderFactory.createTitledBorder("Dados do Cliente"));
