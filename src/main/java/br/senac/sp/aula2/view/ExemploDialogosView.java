@@ -5,6 +5,7 @@
  */
 package br.senac.sp.aula2.view;
 
+import com.sun.corba.se.impl.protocol.giopmsgheaders.Message;
 import javax.swing.JOptionPane;
 
 /**
@@ -130,13 +131,12 @@ public class ExemploDialogosView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAlertaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAlertaActionPerformed
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Alerta","Message Dialog", JOptionPane.WARNING_MESSAGE);
 
     }//GEN-LAST:event_btnAlertaActionPerformed
 
     private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
-        // TODO add your handling code here:
-        
+        int retorno= (int)JOptionPane.showConfirmDialog(null,"Deseja Salvar? ", "Título",JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE);
     }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnEntradaSimplesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntradaSimplesActionPerformed
@@ -145,12 +145,20 @@ public class ExemploDialogosView extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEntradaSimplesActionPerformed
 
     private void btnOpcoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpcoesActionPerformed
-        // TODO add your handling code here:
+        int escolha = JOptionPane.showOptionDialog(null,            //Componente pai
+                        "Qual sistema de medidas usar?", //mensagem,
+                        "Escolha uma opção",             //Título
+                        JOptionPane.YES_NO_OPTION,       //int optionType
+                        JOptionPane.INFORMATION_MESSAGE, //Tipo de Mensagem
+                        null,                            //Icon icon
+                        new Object[]{"Km","Milhas","Polegadas","Jardas"},  //Object[] opções,
+                        "Km");                                             //Object initialValue 
         
     }//GEN-LAST:event_btnOpcoesActionPerformed
 
     private void btnJDialogActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJDialogActionPerformed
-        // TODO add your handling code here:
+        ExemploJDialogView dialogoView = new ExemploJDialogView(this,true); 
+        dialogoView.setVisible(true);
     }//GEN-LAST:event_btnJDialogActionPerformed
 
     /**
